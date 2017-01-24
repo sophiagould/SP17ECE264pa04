@@ -134,7 +134,8 @@ Unlike in previous assignments, this assignment asks you to modify many files. T
 * `pa04.h`: You will define a the function pointer type and a new structure
   that contains all the components necessary to perform an integration,
   including a pointer to the function to be integrated, as well as a field to
-  store the result of the integration.
+  store the result of the integration. Please follow the naming convention mentioned in pa04.h strictly. 
+  While calculating partial credit, if your fucntion names and variable names do not match with the instructor's key, your program will fail to compile and you will be given zero credit.
 * `answer04.c`: This file contains your integration functions: `integrate`, which takes the structure you defined in `pa04.h` and uses that information to perform a numerical integration, and `runIntegrate`, which takes the name of an input file and an output file as arguments and:
     1. Reads the upper limit, lower limit, and number of intervals from the input file.
     2. Uses `integrate` to numerically integrate five functions (provided for you, called `func1`, `func2`, `func3`, `func4`, and `func5`).
@@ -183,6 +184,9 @@ In PA03, pa03-test1 and pa03-test2 also show how to run multiple test cases.
 
 Your Makefile for PA04 needs to run the five test cases stored in testdir,
 using a target called `testall`.
+The name of the executable should be 'pa04'. This is essential as we will use your executable file to test some other testcases as well. 
+Also when you run the five test cases using 'testall' target, the output files generated for each input test file should be named 'output_<test file name>'
+e.g. For file test1, ouptput file name should be output_test1.
 
 **Don't forget to define the flags `RUN_INTEGRATE` and `TEST_INTEGRATE` to
 make sure that the code you write in answer04.c gets compiled!**

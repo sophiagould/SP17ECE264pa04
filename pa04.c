@@ -11,7 +11,7 @@
 // It has two arguments:
 //     first int called "argc"
 //     seond is char * * called "argv"
-// The funct returns EXIT_SUCCESS or EXIT_FAILURE (not 0 or 1)
+// The function returns EXIT_SUCCESS or EXIT_FAILURE (not 0 or 1)
 
 // The function expects two arguments; thus, argc must be three 
 // argv[0] is always the name of the program
