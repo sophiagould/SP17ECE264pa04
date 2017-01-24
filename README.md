@@ -183,10 +183,13 @@ In PA01, `testsome` and `testall` show how to run multiple test cases.
 In PA03, pa03-test1 and pa03-test2 also show how to run multiple test cases.
 
 Your Makefile for PA04 needs to run the five test cases stored in testdir,
-using a target called `testall`.
-The name of the executable should be 'pa04'. This is essential as we will use your executable file to test some other testcases as well. 
-Also when you run the five test cases using 'testall' target, the output files generated for each input test file should be named 'output_<test file name>'
-e.g. For file test1, ouptput file name should be output_test1.
+using a target called `testall`. **Remember to have your `testall` recipe
+compile your files if needed!** Look at previous Makefiles we have given
+you to see how to add this dependency. **The name of the executable should be 'pa04'.**
+This is essential as we will use your executable file to test some other
+testcases as well. Also, when you run the five test cases using 'testall'
+target, the output files generated for each input test file should be named
+`output_<test file name>` e.g. for file test1, ouptput file name should be output_test1.
 
 **Don't forget to define the flags `RUN_INTEGRATE` and `TEST_INTEGRATE` to
 make sure that the code you write in answer04.c gets compiled!**
