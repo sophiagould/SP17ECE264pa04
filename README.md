@@ -60,7 +60,7 @@ int x = f(3); //equivalent to: int x = foo(3)
 In this assignment, you need to create a type called `funcptr` (you must
 use this name) for the functions you want to integrate. A function of type `funcptr` should take as argument one `double`, and return a `double`.
 
-With this type, it is possible creating an array of five functions called
+With this type, it is possible to create an array of five functions called
 `func1`, `func2`, ..., `func5`.  
 
 The program can go through these five functions in the same way
@@ -105,6 +105,7 @@ The key to working with files is to understand the basic file manipulation API (
       contents of the file.
     * `"a+"`: open the file for reading and *appending*: reads start at the
       beginning of the file, writes append to the end of the file.
+  
   `inf = fopen("test1", "r")` will open the file named "test" for reading, and
   return the necessary file info to the `FILE` pointer `inf`. If `inf` is
   `NULL` after calling `fopen`, then the operation failed. You can find out
