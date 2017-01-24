@@ -3,7 +3,7 @@
 #include "pa04.h"
 
 // must enclose the function by #ifdef TEST_INTEGRATE 
-// and #endif to enable particial credits
+// and #endif to enable partial credits
 #ifdef TEST_INTEGRATE
 void integrate(Integration * intrg)
 {
@@ -16,7 +16,7 @@ void integrate(Integration * intrg)
  #endif // TEST_INTEGRATE
 
 // must enclose the function by #ifdef RUN_INTEGRATE
-// and #endif to enable particial credits
+// and #endif to enable partial credits
 
 #ifdef RUN_INTEGRATE
 bool  runIntegrate(char * infilename, char * outfilename)
