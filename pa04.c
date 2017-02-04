@@ -19,19 +19,24 @@
 // argv[2] is the name for the output file
 int main(int argc, char * * argv)
 {
+	bool tof = runIntegrate(argv[1], argv[2]);
+
   // check whether argc is 3
   // If argc is not argc, return EXIT_FAILURE
 
-
+	if(argc != 3)
+	{
+		return EXIT_FAILURE;
+	}
 
   // call runIntegrate with argv[1] and argv[2]
   // runIntegrate may return true or false
   // If runIntegrate returns false, main returns EXIT_FAILURE
 
-
-
+	if(tof == false)
+	{
+		return EXIT_FAILURE;
+	}
   // other return EXIT_SUCCESS
-
-
-
+	return EXIT_SUCCESS;
 }
