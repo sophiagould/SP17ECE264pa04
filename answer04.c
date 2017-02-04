@@ -11,11 +11,10 @@ void integrate(Integration * intrg)
   double reg = 0;
   reg = (intrg -> upperlimit - intrg -> lowerlimit) / (intrg -> intervals);
   for (int i = 0; i < intrg -> intervals; i++){
-  	intrg -> answer += reg * intrg -> func(intrg -> lowerlimit + i * reg);
+  	intrg -> answer += reg * intrg -> func(intrg -> lowerlimit + (i * reg));
   }
   // integrate the function stored in intrg's func
   // store the result in intrg's answer
-
 }
  #endif // TEST_INTEGRATE
 
@@ -29,7 +28,9 @@ bool  runIntegrate(char * infilename, char * outfilename)
 // return false when encountering any problem
 {
   // open the input file name for reading
-	FILE * inf = fopen(infilename, "r");
+	FILE * inf;
+	inf = fopen(infilename, "r");
+	
 	if (inf == NULL){
 		return false;
 	}
