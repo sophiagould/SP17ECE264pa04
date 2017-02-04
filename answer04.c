@@ -100,7 +100,7 @@ bool  runIntegrate(char * infilename, char * outfilename)
     for(int y = 0; y < 5; y++){
 		intrg.func = funcs[y];
 		integrate(&intrg);
-		n = fprintf(outf, "%lf %s", intrg.answer, "\n");
+		n = fprintf(outf, "%lf\n", intrg.answer);
 	}
 
 
