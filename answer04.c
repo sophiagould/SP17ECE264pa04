@@ -81,8 +81,8 @@ bool  runIntegrate(char * infilename, char * outfilename)
   // open the output file for writing
   // if fopen fails, return false
 
-	inf = fopen(outfilename, "w");
-	if (inf == NULL){
+	FILE * outf = fopen(outfilename, "w");
+	if (outf == NULL){
 		return false;
 	}
 
@@ -100,7 +100,7 @@ bool  runIntegrate(char * infilename, char * outfilename)
     for(int y = 0; y < 5; y++){
 		intrg.func = funcs[y];
 		integrate(&intrg);
-		n = fprintf(inf, "%lf %s", intrg.answer, "\n");
+		n = fprintf(outf, "%lf %s", intrg.answer, "\n");
 	}
 
 
@@ -109,14 +109,14 @@ bool  runIntegrate(char * infilename, char * outfilename)
   // file and return false
 
 	if(n < 1){
-		fclose(inf);
+		fclose(outf);
 		return false;
 	}
 
 
   // after going through all functions in funcs
   // close the output file
-	fclose(inf);
+	fclose(outf);
 
   // if the function reaches here, return true
 
