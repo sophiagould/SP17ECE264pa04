@@ -1,0 +1,40 @@
+
+Checking Makefile (20%)
+make testall :Passed
+ 
+
+Compiling student's code (exe pa04_stu) : Passed
+Compiling student's pa04.c with instructor's answer04.c (exe pa04_main) : Passed
+Compiling student's runIntegrate with instructor's answer key (exe pa04_file, pa04_check_ans) : Passed
+
+Check main (20%): 
+./pa04_main : Correct Return Code
+
+./pa04_main testdir/test1 output_test1 : Correct Return Code
+
+./pa04_main testdir/test1 output_test1 unneccesary_arg : Correct Return Code
+
+
+Checking with different input and output files (30%): 
+./pa04_file non_existing_file output_test1 : Correct Return Code
+
+./pa04_file blank_file output_test1 : Correct Return Code
+
+./pa04_file test_blank_interval output_test1 : Correct Return Code
+
+./pa04_file test_alphanumeric_letters_as_upperlimit output_test1 : Correct Return Code
+
+./pa04_file testdir/test1 output_test1 : Correct Return Code
+
+
+Checking integration result (30%): 
+./pa04_check_ans main_testdir/test1 output_test1: 5/5 correct answers
+
+./pa04_check_ans main_testdir/test2 output_test2: 5/5 correct answers
+
+./pa04_check_ans main_testdir/test3 output_test3: 5/5 correct answers
+
+./pa04_check_ans main_testdir/test4 output_test4: 5/5 correct answers
+
+./pa04_check_ans main_testdir/test5 output_test5: 5/5 correct answers
+
